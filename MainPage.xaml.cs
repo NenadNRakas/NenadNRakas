@@ -109,6 +109,10 @@ namespace APOD
             // Create the container for the local settings.
             localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             this.InitializeComponent();
+            if (Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.IsSupported())
+            {
+                this.feedBackButton.Visibility = Visibility.Visible;
+            }
             // Set the maximum date to today, and the minimum date to the date APOD was launched.
             MonthCalendar.MinDate = launchDate;
             MonthCalendar.MaxDate = DateTime.Today;
@@ -367,6 +371,11 @@ namespace APOD
                                       "different date in the drop down calendar menu. By deselecting the show on start up checkbox, you can save an " +
                                       "image when restarting the application. Hovering over elements will guide you with tooltip popups. " +
                                       "Credits: Special thank you to Microsoft and NASA.";
+        }
+        private async void feedBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var launcher = Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.GetDefault();
+            await launcher.LaunchAsync();
         }
     }
 }

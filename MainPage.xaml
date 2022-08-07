@@ -15,7 +15,6 @@
             <GradientStop Color="Black" Offset="0.442"/>
         </LinearGradientBrush>
     </Page.Background>
-
     <Grid RequestedTheme="Dark" 
           LostFocus="Grid_LostFocus" BorderBrush="White" BorderThickness="0,2,0,0">
         <CalendarDatePicker x:Name="MonthCalendar" 
@@ -32,7 +31,7 @@
                 Content="&#xE939;" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
-                Visibility="Visible" 
+                Visibility="Collapsed" 
                 Margin="10,10,0,0" 
                 Width="71" 
                 Height="71" 
