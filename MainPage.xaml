@@ -29,12 +29,13 @@
                             ToolTipService.ToolTip="Alternatively you might opt for a self selected images of the day!"/>
         <Button x:Name="AboutButton" 
                 Content="About" 
-                Margin="10,10,0,0" 
+                Margin="130,10,0,0" 
                 VerticalAlignment="Top" 
                 Click="AboutButton_Click" 
                 Background="RoyalBlue" 
                 BorderBrush="#FFFBF8F8" 
                 Width="120" 
+                Height="32"
                 ToolTipService.ToolTip="Should you be interested in learning more about us at [@.i.]™"/>
         <Button x:Name="LaunchButton" 
                 Content="Launch" 
@@ -44,6 +45,7 @@
                 Background="RoyalBlue" 
                 BorderBrush="#FFFBF8F8" 
                 Width="120" 
+                Height="32"
                 ToolTipService.ToolTip="You can start your journey back in time with APOD Project's Launch Date on 16th June 1995"/>
         <CheckBox x:Name="LimitRangeCheckBox" 
                   Content="Limit date range to current year." 
